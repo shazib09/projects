@@ -1,4 +1,9 @@
+import 'dart:collection';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+
+import 'dashbord/webcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,27 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home:  Welcome(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-            onPressed: () {},
-            child: Text("Button"),
-        ),
-      ),
-    );
-  }
-}
